@@ -7,4 +7,3 @@ version_files = [
     ".cz.toml:version",
     ]
 update_changelog_on_bump = true
-changelog_incremental = true
