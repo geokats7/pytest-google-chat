@@ -30,7 +30,7 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           body_path: "body.md"
-          tag_name: ${{ env.REVISION }}
+          name: Release ${{ github.ref }}
 
   deploy:
     if: startsWith(github.ref, 'refs/tags/v')
