@@ -5,7 +5,6 @@ pytest-google-chat
 
 [![Python versions](https://img.shields.io/pypi/pyversions/pytest-google-chat.svg)](https://pypi.org/project/pytest-google-chat)
 
-[![See Build Status on AppVeyor](https://ci.appveyor.com/api/projects/status/github/geokats7/pytest-google-chat?branch=master)](https://ci.appveyor.com/project/geokats7/pytest-google-chat/branch/master)
 
 Notify google chat channel for test results
 
