@@ -3,6 +3,9 @@
 import pytest
 from pytest_google_chat.post_to_google_chat import post_to_google_chat
 from pytest_google_chat.config_manager import ConfigManager
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 
 class TestResult:

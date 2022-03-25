@@ -1,4 +1,5 @@
 import requests
+import logging
 
 
 def post_to_google_chat(test_result, config_manager, exitstatus):
@@ -63,6 +64,6 @@ def post_to_google_chat(test_result, config_manager, exitstatus):
 
     response = requests.post(url=gc_webhook, json=main_message, headers={"Content-type": "application/json"})
     if response.status_code == 200:
-        print("\n Successfully posted pytest report on google chat")
+        logging.info("\n Successfully posted pytest report on google chat")
     else:
-        print("\n Something went wrong. Unable to post pytest report on google chat. Response:", response)
+        logging.info("\n Something went wrong. Unable to post pytest report on google chat. Response:", response)
