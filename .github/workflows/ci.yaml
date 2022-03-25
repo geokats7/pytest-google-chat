@@ -10,7 +10,6 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, 'bump:') && github.ref == 'refs/heads/main'"
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -28,7 +27,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           prerelease: false
           draft: false
           body_path: "body.md"
