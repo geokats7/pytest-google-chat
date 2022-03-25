@@ -38,7 +38,8 @@ You can install \"pytest-google-chat\" via
 Usage
 -----
 
--   TODO
+In order to use this plugin, you need to provide the command line flag `--google-chat` **and** a valid goggle chat webhook.  
+The webhook, as all the other parameters, can be provided as a command line argument, as a value inside a config file or as an environment variable.  
 
 Contributing
 ------------
