@@ -15,9 +15,10 @@ jobs:
         with:
           python-version: "3.9"
       - name: Checkout repository
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          fetch-depth: 0
       - name: Install dependencies
         run: pip install -U commitizen
       - name: Create bump and changelog
