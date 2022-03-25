@@ -1,3 +1,9 @@
+## v0.2.3 (2022-03-25)
+
+### Fix
+
+- add personal token to trigger the second job
+
 ## v0.2.2 (2022-03-25)
 
 ### Fix
