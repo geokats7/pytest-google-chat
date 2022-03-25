@@ -10,10 +10,10 @@ jobs:
     if: "!startsWith(github.event.head_commit.message, 'bump:') && github.ref == 'refs/heads/main'"
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.9"
+#      - name: Setup Python
+#        uses: actions/setup-python@v3
+#        with:
+#          python-version: "3.9"
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
