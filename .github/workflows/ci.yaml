@@ -32,8 +32,8 @@ jobs:
           prerelease: false
           draft: false
           body_path: "body.md"
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          name: Release v${{ env.REVISION }}
+          tag_name: v${{ env.REVISION }}
 
 
   deploy:
