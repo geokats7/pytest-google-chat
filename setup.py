@@ -27,6 +27,7 @@ setup(
     url='https://github.com/geokats7/pytest-google-chat',
     description='Notify google chat channel for test results',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
     py_modules=['pytest_google_chat'],
     python_requires='>=3.6',

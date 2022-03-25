@@ -9,12 +9,19 @@ pytest-google-chat
 Notify google chat channel for test results
 
 ------------------------------------------------------------------------
-
+- [Installation](#installation)
+- [Usage](#usage)
+  * [Command line options](#command-line-options)
+  * [Using a config file](#using-a-config-file)
+  * [Using environment variables:](#using-environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
+- [Issues](#issues)
 
 Installation
 ------------
 
-You can install \"pytest-google-chat\" via
+You can install pytest-google-chat via
 [pip](https://pypi.org/project/pip/) from
 [PyPI](https://pypi.org/project):
 
@@ -26,7 +33,7 @@ Usage
 In order to use this plugin, you need to provide the command line flag `--google-chat` **and** a valid goggle chat webhook.  
 The webhook, as all the other parameters, can be provided as a command line argument, as a value inside a config file or as an environment variable.  
 
-Command line options:
+### Command line options
 
 | Option          | Description                                                                               | Default value             |
 |-----------------|-------------------------------------------------------------------------------------------|---------------------------|
@@ -39,7 +46,7 @@ Command line options:
 | `--gc-success-image` | The url of an image to use when the test succeeds                                         | None |
 | `--gc-config`   | The path to the config file                                                               | None |
 
-Using the config file(example):
+### Using a config file
 ```editorconfig
 [GOOGLE-CHAT]
 gc_webhook=https://chat.googleapis.com/v1/spaces/AAAA7GkHUoE/messages?key=XXXX&token=YYYY # Do NOT use double quotes here
@@ -50,7 +57,7 @@ gc_fail_image=https://link.to.image
 gc_success_image=https://link.to.image
 ```
 
-Finally, you can use an environment variable:  
+### Using environment variables:  
 `REPORT_TITLE="My Report" pytest --google-chat --gc-webhook=https://....`
 
 **NOTE**  
