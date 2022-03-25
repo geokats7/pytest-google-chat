@@ -1,3 +1,9 @@
+## v0.2.4 (2022-03-25)
+
+### Fix
+
+- remove 'on push' to trigger the second job on v. branch
+
 ## v0.2.3 (2022-03-25)
 
 ### Fix
