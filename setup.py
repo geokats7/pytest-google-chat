@@ -3,10 +3,10 @@
 
 import os
 import codecs
-
 import setuptools
 from setuptools import setup
 
+version = '0.1.0'
 
 def read(fname):
     file_path = os.path.join(os.path.dirname(__file__), fname)
@@ -18,7 +18,7 @@ with open('requirements/requirements.txt') as requirements_file:
 
 setup(
     name='pytest-google-chat',
-    version='0.1.0',
+    version=version,
     author='Yorgos Katsaros',
     author_email='yorgos.katsaros@gmail.com',
     maintainer='Yorgos Katsaros',
