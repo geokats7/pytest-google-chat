@@ -55,8 +55,8 @@ jobs:
         shell: bash
       - name: Publish to PYPI
         env:
-          TWINE_USERNAME: ${{ secrets.ORFIUM_PRIVATE_PYPI_USERNAME }}
-          TWINE_PASSWORD: ${{ secrets.ORFIUM_PRIVATE_PYPI_PASSWORD }}
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           pip install twine
           twine upload dist/${{ steps.build.outputs.wheel_file }}
