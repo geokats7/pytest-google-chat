@@ -47,7 +47,7 @@ The webhook, as all the other parameters, can be provided as a command line argu
 | `--gc-config`   | The path to the config file                                                               | None |
 
 ### Using a config file
-```editorconfig
+```ini
 [GOOGLE-CHAT]
 gc_webhook=https://chat.googleapis.com/v1/spaces/AAAA7GkHUoE/messages?key=XXXX&token=YYYY # Do NOT use double quotes here
 report_link=https://link.to.report
