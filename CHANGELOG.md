@@ -1,3 +1,10 @@
+## v0.3.1 (2022-03-26)
+
+### Fix
+
+- bug with xfailed tests
+- correctly log messages
+
 ## v0.3.0 (2022-03-25)
 
 ### Fix
