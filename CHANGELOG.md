@@ -1,3 +1,9 @@
+## v0.4.2 (2022-03-26)
+
+### Fix
+
+- **README**: add correct highlight for config file example
+
 ## v0.4.1 (2022-03-26)
 
 ### Fix
