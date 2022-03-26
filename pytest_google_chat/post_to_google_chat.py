@@ -2,6 +2,15 @@ import requests
 import logging
 
 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+handler = logging.StreamHandler()
+handler.setLevel(logging.INFO)
+formatter = logging.Formatter('%(levelname)s:%(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
+
+
 def post_to_google_chat(test_result, config_manager, exitstatus):
     gc_webhook = config_manager.getoption("gc-webhook", "gc_webhook", "GOOGLE-CHAT")
     report_link = config_manager.getoption("report-link", "report_link", "GOOGLE-CHAT")
@@ -27,7 +36,7 @@ def post_to_google_chat(test_result, config_manager, exitstatus):
     xfailed_tests = f"\nXFailed: {test_result.xfailed}" if test_result.xfailed else ""
     xpassed_tests = f"\nXPassed: {test_result.xpassed}" if test_result.xpassed else ""
 
-    report_message = passed_tests + failed_tests + skipped_tests + error_tests + xfailed_tests + xfailed_tests
+    report_message = passed_tests + failed_tests + skipped_tests + error_tests + xfailed_tests + xpassed_tests
 
     # Arrange your data in pre-defined format. See an example here:
     # https://developers.google.com/hangouts/chat/reference/message-formats/cards
@@ -64,6 +73,6 @@ def post_to_google_chat(test_result, config_manager, exitstatus):
 
     response = requests.post(url=gc_webhook, json=main_message, headers={"Content-type": "application/json"})
     if response.status_code == 200:
-        logging.info("\n Successfully posted pytest report on google chat")
+        logger.info("\n Successfully posted pytest report on google chat")
     else:
-        logging.info("\n Something went wrong. Unable to post pytest report on google chat. Response:", response)
+        logger.info(f"\n Something went wrong. Unable to post pytest report on google chat. Response: {response}")
