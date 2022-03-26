@@ -55,7 +55,7 @@ jobs:
         shell: bash
       - name: Publish to PYPI
         env:
-          TWINE_USERNAME: __token__
+          TWINE_USERNAME: "__token__"
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           pip install twine
