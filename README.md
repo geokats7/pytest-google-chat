@@ -18,16 +18,16 @@ Notify google chat channel for test results
 - [License](#license)
 - [Issues](#issues)
 
-Installation
+🧰 Installation
 ------------
 
-You can install pytest-google-chat via
+You can install pytest-google-chat via 
 [pip](https://pypi.org/project/pip/) from
 [PyPI](https://pypi.org/project):
 
     $ pip install pytest-google-chat
 
-Usage
+📖 Usage
 -----
 
 In order to use this plugin, you need to provide the command line flag `--google-chat` **and** a valid goggle chat webhook.  
@@ -60,7 +60,7 @@ gc_success_image=https://link.to.image
 ### Using environment variables:  
 `REPORT_TITLE="My Report" pytest --google-chat --gc-webhook=https://....`
 
-**NOTE**  
+❗**NOTE**  
 All previous methods can be used combined.  
 The order of precedence is: command line options > config file > environment variable.
 
