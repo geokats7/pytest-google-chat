@@ -35,21 +35,21 @@ The webhook, as all the other parameters, can be provided as a command line argu
 
 ### Command line options
 
-| Option          | Description                                                                               | Default value             |
-|-----------------|-------------------------------------------------------------------------------------------|---------------------------|
-| `--google-chat` | Enable the plugin (**required**)                                                          | This doesn't need a value |
-| `--gc-webhook`  | The webhook to send notifications to. <br/>**Important:** Use double quotes for the value | None |
-| `--report-link` | The link to the report                                                                    | None |
-| `--report-title`| The title of the report                                                                   | None |
-| `--report-subtitle` | The subtitle of the report                                                                | None |
-| `--gc-fail-image` | The url of an image to use when the test fails                                            | None |
-| `--gc-success-image` | The url of an image to use when the test succeeds                                         | None |
-| `--gc-config`   | The path to the config file                                                               | None |
+| Option          | Description                                                                                         | Default value             |
+|-----------------|-----------------------------------------------------------------------------------------------------|---------------------------|
+| `--google-chat` | Enable the plugin (**required**)                                                                    | This doesn't need a value |
+| `--gc-webhook`  | The webhook to send notifications to. <br/>**Important:** Use double or single quotes for the value | None |
+| `--report-link` | The link to the report                                                                              | None |
+| `--report-title`| The title of the report                                                                             | None |
+| `--report-subtitle` | The subtitle of the report                                                                          | None |
+| `--gc-fail-image` | The url of an image to use when the test fails                                                      | None |
+| `--gc-success-image` | The url of an image to use when the test succeeds                                                   | None |
+| `--gc-config`   | The path to the config file                                                                         | None |
 
 ### Using a config file
 ```ini
 [GOOGLE-CHAT]
-gc_webhook=https://chat.googleapis.com/v1/spaces/AAAA7GkHUoE/messages?key=XXXX&token=YYYY # Do NOT use double quotes here
+gc_webhook=https://chat.googleapis.com/v1/spaces/AAAA7GkHUoE/messages?key=XXXX&token=YYYY
 report_link=https://link.to.report
 report_title=My Report
 report_subtitle=My Report Subtitle

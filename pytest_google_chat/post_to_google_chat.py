@@ -1,5 +1,6 @@
 import requests
 import logging
+import pytest
 
 
 logger = logging.getLogger(__name__)
@@ -13,6 +14,9 @@ logger.addHandler(handler)
 
 def post_to_google_chat(test_result, config_manager, exitstatus):
     gc_webhook = config_manager.getoption("gc-webhook", "gc_webhook", "GOOGLE-CHAT")
+    if gc_webhook is None:
+        pytest.exit("\nERROR: Google Chat Webhook not configured")
+    gc_webhook = gc_webhook.strip('"').strip("'")
     report_link = config_manager.getoption("report-link", "report_link", "GOOGLE-CHAT")
 
     report_title = config_manager.getoption("report-title", "report_title", "GOOGLE-CHAT")
