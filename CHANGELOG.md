@@ -1,3 +1,9 @@
+## v0.4.0 (2022-03-26)
+
+### Feat
+
+- **ci.yaml**: publish package to PYPI after release
+
 ## v0.3.1 (2022-03-26)
 
 ### Fix
