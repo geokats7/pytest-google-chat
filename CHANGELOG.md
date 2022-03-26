@@ -1,3 +1,9 @@
+## v0.4.3 (2022-03-26)
+
+### Fix
+
+- handle gc webhook string quotes, exit if the value is not provided
+
 ## v0.4.2 (2022-03-26)
 
 ### Fix
