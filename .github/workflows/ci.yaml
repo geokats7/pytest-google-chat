@@ -53,11 +53,10 @@ jobs:
           python setup.py bdist_wheel
           echo "::set-output name=wheel_file::$(basename $(ls dist/*.whl | head -1))"
         shell: bash
-#      - name: Publish to PYPI
-#        env:
-#          TWINE_USERNAME: ${{ secrets.ORFIUM_PRIVATE_PYPI_USERNAME }}
-#          TWINE_PASSWORD: ${{ secrets.ORFIUM_PRIVATE_PYPI_PASSWORD }}
-#          TWINE_REPOSITORY_URL: "https://pypicloud.herokuapp.com/simple/"
-#        run: |
-#          pip install twine
-#          twine upload dist/${{ steps.build.outputs.wheel_file }}
+      - name: Publish to PYPI
+        env:
+          TWINE_USERNAME: ${{ secrets.ORFIUM_PRIVATE_PYPI_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.ORFIUM_PRIVATE_PYPI_PASSWORD }}
+        run: |
+          pip install twine
+          twine upload dist/${{ steps.build.outputs.wheel_file }}
