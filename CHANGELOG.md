@@ -1,3 +1,10 @@
+## v0.4.1 (2022-03-26)
+
+### Fix
+
+- api token for PYPI publish
+- add api token for PYPI publish
+
 ## v0.4.0 (2022-03-26)
 
 ### Feat
