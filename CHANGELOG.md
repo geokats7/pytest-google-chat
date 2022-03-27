@@ -1,3 +1,9 @@
+## v0.4.4 (2022-03-27)
+
+### Fix
+
+- format and style corrections
+
 ## v0.4.3 (2022-03-26)
 
 ### Fix
