@@ -54,7 +54,7 @@ def post_to_google_chat(test_result, config_manager, exitstatus):
                 },
                 "sections": [
                     {"widgets": [{"keyValue": {"topLabel": "Status", "content": f"<font color={status_color}>" + status + "</font>"}}]},
-                    {"widgets": [{"textParagraph": {"text": report_message}}]} if report_message is not None else None,
+                    {"widgets": [{"textParagraph": {"text": report_message}}]},
                     {
                         "widgets": [
                             {

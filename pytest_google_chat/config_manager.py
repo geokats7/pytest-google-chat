@@ -1,6 +1,7 @@
 import os
 import configparser
 
+
 class ConfigManager(object):
     def __init__(self, cfg_file_path, config):
         """
